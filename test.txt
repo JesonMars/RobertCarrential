@@ -1,2 +1,5 @@
 Test the commit function!
 fdsjafkl
+
+new add1
+new add2
