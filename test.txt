@@ -3,9 +3,5 @@ fdsjafkl
 
 new add1
 new add2
-
-<<<<<<< HEAD
 new add local
-=======
 new add3
->>>>>>> 8f45d840e61235daf3cd641082ce7aac86f3ffdd
