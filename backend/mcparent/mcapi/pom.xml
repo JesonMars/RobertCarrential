@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>mcapi</artifactId>
     <version>${com.mc.mcapi.version}</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 
 
     <dependencies>
@@ -31,4 +31,6 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
     </dependencies>
+
+
 </project>
