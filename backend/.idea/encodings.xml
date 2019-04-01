@@ -2,9 +2,11 @@
 <project version="4">
   <component name="Encoding" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mapper" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mcapi" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/model" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/services" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mcparent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mcparent/iservices" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mcparent/mapper" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mcparent/mcapi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mcparent/model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mcparent/services" charset="UTF-8" />
   </component>
 </project>
