@@ -8,6 +8,6 @@ import tk.mybatis.mapper.common.example.SelectByExampleMapper;
 import tk.mybatis.mapper.common.example.SelectCountByExampleMapper;
 import tk.mybatis.mapper.common.example.SelectOneByExampleMapper;
 
-@Mapper
+
 public interface IBaseReader<T> extends SelectByExampleMapper<T>, SelectOneByExampleMapper<T>, SelectCountByExampleMapper<T>, RowBoundsMapper<T>, BaseSelectMapper<T>, Marker {
 }

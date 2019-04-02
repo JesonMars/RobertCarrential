@@ -9,7 +9,7 @@ import tk.mybatis.mapper.common.example.DeleteByExampleMapper;
 import tk.mybatis.mapper.common.example.UpdateByExampleMapper;
 import tk.mybatis.mapper.common.example.UpdateByExampleSelectiveMapper;
 
-@Mapper
+
 public interface IBaseWriter<T> extends BaseInsertMapper<T>, BaseUpdateMapper<T>, BaseDeleteMapper<T>,
         DeleteByExampleMapper<T>, UpdateByExampleMapper<T>, UpdateByExampleSelectiveMapper<T>, Marker {
 }

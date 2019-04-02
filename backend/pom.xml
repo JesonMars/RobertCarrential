@@ -19,7 +19,8 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <tk.mapper.version>2.0.2</tk.mapper.version>
+        <tk.mapper.boot.version>2.0.2</tk.mapper.boot.version>
+        <tk.mapper.version>3.4.2</tk.mapper.version>
         <com.mc.model.version>1.0-SNAPSHOT</com.mc.model.version>
         <com.mc.mapper.version>1.0-SNAPSHOT</com.mc.mapper.version>
         <com.mc.iservice.version>1.0-SNAPSHOT</com.mc.iservice.version>

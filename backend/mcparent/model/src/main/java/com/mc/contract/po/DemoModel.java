@@ -2,12 +2,14 @@ package com.mc.contract.po;
 
 import lombok.Data;
 
+import javax.persistence.Table;
 import java.util.Date;
 
 /**
  * mapper数据模型,测试model
  */
 @Data
+@Table(name = "product")
 public class DemoModel {
     /**
      * id
