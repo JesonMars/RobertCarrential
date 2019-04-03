@@ -1,7 +1,10 @@
 package com.mc.contract.po;
 
 import lombok.Data;
+import tk.mybatis.mapper.annotation.KeySql;
 
+import javax.persistence.Id;
+import javax.persistence.MapKey;
 import javax.persistence.Table;
 import java.util.Date;
 
@@ -14,6 +17,7 @@ public class DemoModel {
     /**
      * id
      */
+    @Id
     private int id;
     /**
      * name

@@ -6,6 +6,7 @@ import com.mc.mapper.demo.IReader.IDemoReader;
 import com.mc.mapper.demo.IWriter.IDemoWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 
 import java.util.ArrayList;
@@ -29,9 +30,33 @@ public class DemoService implements IDemoService {
     }
 
     @Override
+    public DemoModel getByKey(DemoModel model) {
+
+        com.mc.contract.po.DemoModel po=new com.mc.contract.po.DemoModel();
+        po.setId(model.getId());
+        //转化为po的DemoModel
+        com.mc.contract.po.DemoModel demoModel=demoReader.selectByPrimaryKey(po);
+        return convertPoToBo(demoModel);
+    }
+
+    @Override
     public List<DemoModel> getAllData() {
         List<com.mc.contract.po.DemoModel>  demoModelList= demoReader.selectAll();
         return convertListPoToBo(demoModelList);
+    }
+
+    @Transactional
+    @Override
+    public Integer del(DemoModel demoModel) throws Exception {
+        Integer integer= demoWriter.deleteByPrimaryKey(demoModel.getId());
+        throw new Exception();
+    }
+
+    @Transactional
+    @Override
+    public Integer del1(DemoModel demoModel) {
+        Integer integer=demoWriter.deleteByPrimaryKey(demoModel.getId());
+        return integer;
     }
 
     /**

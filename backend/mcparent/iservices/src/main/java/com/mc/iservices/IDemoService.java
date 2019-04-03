@@ -9,4 +9,9 @@ public interface IDemoService {
     Integer add(DemoModel model);
 
     List<DemoModel> getAllData();
+
+    Integer del(DemoModel demoModel) throws Exception;
+    Integer del1(DemoModel demoModel);
+    DemoModel getByKey(DemoModel model) ;
+
 }

@@ -19,10 +19,6 @@
         </dependency>
 
         <dependency>
-            <groupId>tk.mybatis</groupId>
-            <artifactId>mapper</artifactId>
-        </dependency>
-        <dependency>
             <groupId>com.mengchong</groupId>
             <artifactId>model</artifactId>
         </dependency>
