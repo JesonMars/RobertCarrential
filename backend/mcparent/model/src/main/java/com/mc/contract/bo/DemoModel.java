@@ -12,7 +12,7 @@ public class DemoModel {
     /**
      * id
      */
-    private int id;
+    private long id;
     /**
      * name
      */

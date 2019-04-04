@@ -76,4 +76,34 @@ public class RestApi {
         response.setDemoModelList(demoModels);
         return response;
     }
+    @GetMapping
+    @RequestMapping("add1")
+    @ResponseBody
+    public DemoResponse add1(DemoRequest request){
+        DemoModel demoModel=new DemoModel();
+        demoModel.setId(request.getId());
+        Integer integer= demoService.add1(demoModel);
+
+
+        DemoResponse response= new DemoResponse();
+        List<DemoModel> demoModels=new ArrayList<>();
+        demoModels.add(demoModel);
+        response.setDemoModelList(demoModels);
+        return response;
+    }
+    @GetMapping
+    @RequestMapping("add")
+    @ResponseBody
+    public DemoResponse add(DemoRequest request){
+        DemoModel demoModel=new DemoModel();
+        demoModel.setId(request.getId());
+        Integer integer= demoService.add(demoModel);
+
+
+        DemoResponse response= new DemoResponse();
+        List<DemoModel> demoModels=new ArrayList<>();
+        demoModels.add(demoModel);
+        response.setDemoModelList(demoModels);
+        return response;
+    }
 }

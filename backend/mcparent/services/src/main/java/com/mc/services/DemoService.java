@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -21,12 +22,32 @@ public class DemoService implements IDemoService {
     @Autowired
     IDemoReader demoReader;
 
+    @Transactional
     @Override
     public Integer add(DemoModel model) {
 
         //转化为po的DemoModel
-        com.mc.contract.po.DemoModel demoModel=convertBoToPo(model);
+        com.mc.contract.po.DemoModel demoModel1=convertBoToPo(model);
+        demoWriter.insert(demoModel1);
+
+        com.mc.contract.po.DemoModel demoModel=new com.mc.contract.po.DemoModel();
+        demoModel.setId(1);
+        demoModel.setIsEnable(1232131);
+        demoModel.setUtime(new Date());
+        demoModel.setStore(123);
+        demoModel.setName("test");
+        demoModel.setSex("M");
         return demoWriter.insert(demoModel);
+    }
+
+    @Transactional
+    @Override
+    public Integer add1(DemoModel model) {
+
+        //转化为po的DemoModel
+        com.mc.contract.po.DemoModel demoModel1=convertBoToPo(model);
+        return demoWriter.insert(demoModel1);
+
     }
 
     @Override
@@ -35,7 +56,7 @@ public class DemoService implements IDemoService {
         com.mc.contract.po.DemoModel po=new com.mc.contract.po.DemoModel();
         po.setId(model.getId());
         //转化为po的DemoModel
-        com.mc.contract.po.DemoModel demoModel=demoReader.selectByPrimaryKey(po);
+        com.mc.contract.po.DemoModel demoModel=demoReader.selectByPrimaryKey(po.getId());
         return convertPoToBo(demoModel);
     }
 
@@ -47,9 +68,9 @@ public class DemoService implements IDemoService {
 
     @Transactional
     @Override
-    public Integer del(DemoModel demoModel) throws Exception {
+    public Integer del(DemoModel demoModel) throws SQLException {
         Integer integer= demoWriter.deleteByPrimaryKey(demoModel.getId());
-        throw new Exception();
+        throw new SQLException();
     }
 
     @Transactional

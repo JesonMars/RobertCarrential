@@ -1,11 +1,11 @@
 package com.mc.contract.po;
 
 import lombok.Data;
+import org.springframework.context.annotation.Primary;
+import tk.mybatis.mapper.annotation.ColumnType;
 import tk.mybatis.mapper.annotation.KeySql;
 
-import javax.persistence.Id;
-import javax.persistence.MapKey;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -18,14 +18,18 @@ public class DemoModel {
      * id
      */
     @Id
-    private int id;
+    @Column(name = "id")
+    @KeySql(useGeneratedKeys = true)
+    private long id;
     /**
      * name
      */
     private String name;
+    @Column(name = "store")
     private int store;
     private Date utime;
     private Date ctime;
     private String sex;
+    @Column(name = "is_enable")
     private int isEnable;
 }
